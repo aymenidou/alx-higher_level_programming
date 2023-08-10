@@ -8,7 +8,7 @@ last_digit = number % 10
 str1 = "Last digit of {original} is "
 if (last_digit > 5 and original > 0):
     str1 += "{last_digit} and is greater than 5"
-elif (last_digit == 0 and original > 0):
+elif (original == 0):
     str1 += "{last_digit} and is 0"
 elif (last_digit < 6 or original < 0):
     if (original < 0):
