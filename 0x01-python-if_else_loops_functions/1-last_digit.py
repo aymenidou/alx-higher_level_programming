@@ -10,7 +10,7 @@ if (last_digit > 5 and original > 0):
     str1 += "{last_digit} and is greater than 5"
 elif (last_digit == 0 and original > 0):
     str1 += "{last_digit} and is 0"
-elif (last_digit < 6):
+elif (last_digit < 6 or original < 0):
     if (original < 0):
         str1 += "-"
     str1 += "{last_digit} and is less than 6 and not 0"
