@@ -1,6 +1,13 @@
-def increment(n):
-    n.append(4)
-
-l = [1, 2, 3]
-increment(l)
-print(l)
+# a
+# [1, 2, 3]
+# id (a)
+# 139926795932424
+# a += [4]
+# id(a)
+a = [1, 2, 3]
+print(id(a))
+# 139926795932424
+print(a)
+# [1, 2, 3, 4]
+a += [4]
+print(id(a))
