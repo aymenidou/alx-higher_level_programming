@@ -50,18 +50,20 @@ class Rectangle:
             return 0
         return (2 * self.width) + (2 * self.height)
 
-    # def __repr__(self):
-    #     """print square"""
-    #     if (self.width == 0 or self.height == 0):
-    #         print()
-    #     else:
-    #         for i in range(self.__size):
-    #             for j in range(self.__size):
-    #                 print("#", end="")
-    #             print()
+    def __repr__(self):
+        """print rectangle"""
+        if (self.width == 0 or self.height == 0):
+            print()
+        else:
+            for i in range(self.height):
+                for j in range(self.width):
+                    print("#", end="")
+                if (i == self.height - 1):
+                    return ""
+                print()
 
     def __str__(self):
-        """print square"""
+        """print rectangle"""
         if (self.width == 0 or self.height == 0):
             print()
         else:
