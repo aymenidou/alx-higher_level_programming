@@ -97,4 +97,4 @@ class Rectangle:
             raise TypeError
         if (size < 0):
             raise ValueError
-        return cls(size, size)
+        return Rectangle(size, size)
