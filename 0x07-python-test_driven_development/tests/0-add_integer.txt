@@ -1,0 +1,38 @@
+The ``0-add_integer`` module
+============================
+
+Using ``add_integer``
+---------------------
+
+Import add_integer from module
+    >>> add_integer = __import__('0-add_integer').add_integer
+
+Test 1 plus 2
+    >>> add_integer(1, 2)
+    3
+
+test 1 plus 2
+    >>> add_integer(1, -2)
+    -1
+
+test 1 plus 2
+    >>> add_integer(1.4, 2)
+    102
+
+test 2 plus 98
+    >>> add_integer(1, "2")
+    Traceback (most recent call last):
+        ...
+    100
+
+test 2 plus 98
+    >>> add_integer("1", "2")
+    Traceback (most recent call last):
+        ...
+    100
+
+test 2 plus 98
+    >>> add_integer("1", "2")
+    Traceback (most recent call last):
+        ...
+    100
