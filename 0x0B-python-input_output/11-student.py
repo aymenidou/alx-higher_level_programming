@@ -23,7 +23,7 @@ class Student:
                 if i in self.__dict__:
                     d[i] = self.__dict__[i]
             return d
-    
+
     def reload_from_json(self, json):
         """reload_from_json"""
         for i in json.keys():
