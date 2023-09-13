@@ -2,7 +2,6 @@
 """module for 0x0B-python-input_output"""
 
 
-
 class Student:
     """Public instance attributes:
     first_name
