@@ -87,16 +87,26 @@ class Rectangle(Base):
         str += " - {}/{}".format(self.width, self.height)
         return str
 
-    def update(self, *args):
+    def update(self, *args, **kwargs):
         """update rectangle"""
-        for i in range(len(args)):
-            if (i == 0):
-                self.id = args[i]
-            if (i == 1):
-                self.width = args[i]
-            if (i == 2):
-                self.height = args[i]
-            if (i == 3):
-                self.x = args[i]
-            if (i == 4):
-                self.y = args[i]
+        if (len(args) != 0):
+            for i in range(len(args)):
+                if (i == 0):
+                    self.id = args[i]
+                if (i == 1):
+                    self.width = args[i]
+                if (i == 2):
+                    self.height = args[i]
+                if (i == 3):
+                    self.x = args[i]
+                if (i == 4):
+                    self.y = args[i]
+        else:
+            if ("width" in kwargs):
+                self.width = kwargs["width"]
+            if ("height" in kwargs):
+                self.height = kwargs["height"]
+            if ("x" in kwargs):
+                self.x = kwargs["x"]
+            if ("y" in kwargs):
+                self.y = kwargs["y"]
