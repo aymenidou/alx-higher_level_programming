@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """0x0C. Python - Almost a circle Python OOP"""
 import json
+import csv
 
 
 class Base:
@@ -36,7 +37,7 @@ class Base:
     def from_json_string(json_string):
         """returns the list of the JSON string representation json_string"""
         if (json_string is None):
-            return ""
+            return []
         return json.loads(json_string)
 
     @classmethod
@@ -60,4 +61,53 @@ class Base:
                     array.append(cls.create(**vals))
                 return array
         except Exception:
+            return []
+
+    @classmethod
+    def save_to_file_csv(cls, list_objs):
+        """writes attributes of list_objs to a csv file"""
+        with open(cls.__name__ + ".csv", "w") as f:
+            cwriter = csv.writer(f, delimiter=',')
+            for obj in list_objs:
+                my_l = []
+                if cls.__name__ == "Rectangle":
+                    my_l.append(obj.id)
+                    my_l.append(obj.width)
+                    my_l.append(obj.height)
+                    my_l.append(obj.x)
+                    my_l.append(obj.y)
+                elif cls.__name__ == "Square":
+                    my_l.append(obj.id)
+                    my_l.append(obj.size)
+                    my_l.append(obj.x)
+                    my_l.append(obj.y)
+                cwriter.writerow(my_l)
+
+    @classmethod
+    def load_from_file_csv(cls):
+        """
+        reads a csv file and returns the list of instances
+        that exist in the file
+        """
+        try:
+            with open(cls.__name__ + ".csv", "r") as f:
+                rs = csv.reader(f, delimiter=',')
+                l = []
+                if cls.__name__ == "Rectangle":
+                    for i in rs:
+                        r = cls(
+                                int(i[1]),
+                                int(i[2]),
+                                int(i[3]),
+                                int(i[4]),
+                                int(i[0])
+                                )
+                        l.append(r)
+                    return l
+                elif cls.__name__ == "Square":
+                    for i in rs:
+                        r = cls(int(i[1]), int(i[2]), int(i[3]), int(i[0]))
+                        l.append(r)
+                    return l
+        except:
             return []
