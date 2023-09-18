@@ -82,10 +82,8 @@ class Rectangle(Base):
 
     def __str__(self):
         """return rectangle info"""
-        str = "[Rectangle]"
-        str += " ({}) {}/{} ".format(self.id, self.x, self.y)
-        str += " - {}/{}".format(self.width, self.height)
-        return str
+        return "[Rectangle] ({}) {}/{}  - {}/{}"\
+            .format(self.id, self.x, self.y, self.width, self.height)
 
     def update(self, *args, **kwargs):
         """update rectangle"""
