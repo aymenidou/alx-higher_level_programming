@@ -92,22 +92,22 @@ class Base:
         try:
             with open(cls.__name__ + ".csv", "r") as f:
                 rs = csv.reader(f, delimiter=',')
-                l = []
+                ls = []
                 if cls.__name__ == "Rectangle":
                     for i in rs:
-                        r = cls(
+                        row = cls(
                                 int(i[1]),
                                 int(i[2]),
                                 int(i[3]),
                                 int(i[4]),
                                 int(i[0])
                                 )
-                        l.append(r)
-                    return l
+                        ls.append(row)
+                    return ls
                 elif cls.__name__ == "Square":
                     for i in rs:
-                        r = cls(int(i[1]), int(i[2]), int(i[3]), int(i[0]))
-                        l.append(r)
-                    return l
-        except:
+                        row = cls(int(i[1]), int(i[2]), int(i[3]), int(i[0]))
+                        ls.append(row)
+                    return ls
+        except Exception:
             return []
