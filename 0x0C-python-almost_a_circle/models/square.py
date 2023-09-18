@@ -11,9 +11,8 @@ class Square(Rectangle):
 
     def __str__(self):
         """display square info"""
-        str = "[Square]"
-        str += " ({}) {}/{} ".format(self.id, self.x, self.y)
-        str += " - {}".format(self.width)
+        str = "[Square] ({}) {}/{} ".format(self.id, self.x, self.y)
+        str += "- {}".format(self.width)
         return str
 
     @property
