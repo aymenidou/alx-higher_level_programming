@@ -2,6 +2,7 @@
 """0x0C. Python - Almost a circle Python OOP"""
 import json
 import csv
+from turtle import *
 
 
 class Base:
@@ -111,3 +112,39 @@ class Base:
                     return ls
         except Exception:
             return []
+
+    @staticmethod
+    def draw(list_rectangles, list_squares):
+        """opens a window and draws all the Rectangles and Squares"""
+        bgcolor(0, 0, 0)
+        color(1, 1, 1)
+        pensize(2)
+        i = 0
+        for rect in list_rectangles:
+            forward(rect.width)
+            right(90)
+            forward(rect.height)
+            right(90)
+            forward(rect.width)
+            right(90)
+            forward(rect.height)
+            penup()
+            i += rect.width + 10
+            setposition(i, 0)
+            pendown()
+            right(90)
+
+        for square in list_squares:
+            forward(square.size)
+            right(90)
+            forward(square.size)
+            right(90)
+            forward(square.size)
+            right(90)
+            forward(square.size)
+            penup()
+            i += square.size + 10
+            setposition(i, 0)
+            pendown()
+            right(90)
+        exitonclick()
