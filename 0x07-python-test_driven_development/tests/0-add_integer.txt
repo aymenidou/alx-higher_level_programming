@@ -37,6 +37,12 @@ test "1"
         ...
     TypeError: a must be an integer
 
+test missing one argument
+    >>> add_integer(b="1")
+    Traceback (most recent call last):
+        ...
+    TypeError: add_integer() missing 1 required positional argument: 'a'
+
 test with no arguments
     >>> add_integer()
     Traceback (most recent call last):
