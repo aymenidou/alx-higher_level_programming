@@ -56,7 +56,13 @@ test with None arguments
     TypeError: a must be an integer
 
 test with None arguments
-    >>> add_integer(None)
+    >>> add_integer(float('NaN'))
     Traceback (most recent call last):
         ...
-    TypeError: a must be an integer
+    ValueError: cannot convert float NaN to integer
+
+test with float overflow
+    >>> add_integer(1, float('inf'))
+    Traceback (most recent call last):
+    ...
+    OverflowError: cannot convert float infinity to integer
