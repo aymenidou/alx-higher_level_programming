@@ -1,0 +1,37 @@
+The ``2-matrix_divided`` module
+============================
+
+Using ``matrix_divided``
+---------------------
+
+Import add_integer from module
+    >>> matrix_divided = __import__('2-matrix_divided').matrix_divided
+
+Test matrix= List of Lists of integers / div= integer
+    >>> matrix = [[0, 0, 0],[0, 0, 0]]
+    >>> print(matrix_divided(matrix, 3))
+    [[0.0, 0.0, 0.0], [0.0, 0.0, 0.0]]
+
+Test matrix= List of Lists of integers / div= string
+    >>> print(matrix_divided(matrix, "3"))
+    Traceback (most recent call last):
+    ...
+    TypeError: div must be a number
+
+Test matrix= List of Lists of integers / div= 0
+    >>> print(matrix_divided(matrix, 0))
+    Traceback (most recent call last):
+    ...
+    ZeroDivisionError: division by zero
+
+Test matrix= not a list of lists of integers / div= integer
+    >>> print(matrix_divided([["h","e","l","l","o"]], 1))
+    Traceback (most recent call last):
+    ...
+    TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+Test matrix= not a list of lists of integers / div= integer
+    >>> print(matrix_divided([["h","e","l","l","o"]], 1))
+    Traceback (most recent call last):
+    ...
+    TypeError: matrix must be a matrix (list of lists) of integers/floats
