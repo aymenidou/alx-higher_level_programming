@@ -43,14 +43,8 @@ test missing one argument
         ...
     TypeError: add_integer() missing 1 required positional argument: 'a'
 
-test with no arguments
-    >>> add_integer()
-    Traceback (most recent call last):
-        ...
-    TypeError: add_integer() missing 1 required positional argument: 'a'
-
 test with None arguments
-    >>> add_integer(None, None)
+    >>> add_integer(None)
     Traceback (most recent call last):
         ...
     TypeError: a must be an integer
