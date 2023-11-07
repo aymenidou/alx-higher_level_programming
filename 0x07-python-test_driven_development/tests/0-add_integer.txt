@@ -38,10 +38,16 @@ test "1"
     TypeError: a must be an integer
 
 test missing one argument
-    >>> add_integer(c="1")
+    >>> add_integer(b=1)
     Traceback (most recent call last):
         ...
-    TypeError: add_integer() got an unexpected keyword argument 'c'
+    TypeError: add_integer() missing 1 required positional argument: 'a'
+
+test missing one argument
+    >>> add_integer(b=None)
+    Traceback (most recent call last):
+        ...
+    TypeError: add_integer() missing 1 required positional argument: 'a'
 
 test with None arguments
     >>> add_integer(None)
