@@ -10,7 +10,6 @@ def text_indentation(text):
     for i in range(len(text)):
         if (text[i] in ".?:"):
             print("{}\n".format(text[i]))
-            i += 1;
         else:
             if (i > 0 and text[i - 1] in ".?:" and text[i] == " "):
                 continue
