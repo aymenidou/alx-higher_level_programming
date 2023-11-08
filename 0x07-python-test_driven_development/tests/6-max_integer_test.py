@@ -22,4 +22,4 @@ class TestMaxInteger(unittest.TestCase):
 
     def test_EmptyList(self):
         self.assertEqual(max_integer([]), None)
-        self.assertEqual(max_integer([2, 2, 2, 2]), 2)
+        self.assertEqual(max_integer([2]), 2)
