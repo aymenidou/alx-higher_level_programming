@@ -1,5 +1,5 @@
 #!/usr/bin/node
-const Rectangle = class {
+class Rectangle {
   constructor (w, h) {
     if (w > 0 && h > 0) {
       this.width = w;
@@ -27,5 +27,5 @@ const Rectangle = class {
     this.width *= 2;
     this.height *= 2;
   }
-};
+}
 module.exports = Rectangle;
