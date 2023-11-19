@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+"""module contain sql query"""
 import MySQLdb
 import sys
 
