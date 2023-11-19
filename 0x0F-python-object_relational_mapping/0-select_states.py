@@ -8,7 +8,7 @@ def main(argv):
     conn = MySQLdb.connect(host='localhost', port=3306,
                            user=argv[1], password=argv[2], database=argv[3])
     cur = conn.cursor()
-    cur.execute('select * from states order by id ASC')
+    cur.execute('SELECT * FROM states ORDER BY id ASC')
     query_rows = cur.fetchall()
     for row in query_rows:
         print(row)
