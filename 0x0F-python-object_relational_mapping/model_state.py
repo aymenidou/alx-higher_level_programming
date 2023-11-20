@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-""""""
+"""module contain state table representation"""
 from sqlalchemy import Column, Integer, String
 from sqlalchemy.ext.declarative import declarative_base
 
@@ -7,6 +7,7 @@ Base = declarative_base()
 
 
 class State(Base):
+    """state class definition"""
     __tablename__ = 'states'
     id = Column(Integer, primary_key=True, autoincrement=True, unique=True,
                 nullable=False)
