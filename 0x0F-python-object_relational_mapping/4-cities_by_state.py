@@ -10,7 +10,7 @@ def main(argv):
                            user=argv[1], password=argv[2], database=argv[3])
     cur = conn.cursor()
     cur.execute("SELECT * FROM cities\
-                 ORDER BY state_id ASC")
+                 ORDER BY id ASC")
     query_rows = cur.fetchall()
     for row in query_rows:
         print(row)
