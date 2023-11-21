@@ -17,7 +17,7 @@ def main(argv):
     rows = session.query(State).where(State.name.like(argv[4]))\
         .order_by(asc(State.id)).all()
     if (len(rows) == 0):
-        print("Nothing")
+        print("Not found")
     else:
         for state in rows:
             print("{}".format(state.id))
