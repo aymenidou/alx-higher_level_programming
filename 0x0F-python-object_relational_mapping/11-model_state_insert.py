@@ -14,6 +14,9 @@ def main(argv):
     Base.metadata.create_all(engine)
 
     session = Session(engine)
+    state = State(name="Louisiana")
+    session.add(state)
+    session.commit()
     state = session.query(State).order_by(desc(State.id)).first()
     if (state is None):
         print('Nothing')
