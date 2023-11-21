@@ -20,7 +20,7 @@ def main(argv):
         print("Nothing")
     else:
         for state in rows:
-            print("{}: {}".format(state.id, state.name))
+            print("{}".format(state.id))
     session.close()
 
 
