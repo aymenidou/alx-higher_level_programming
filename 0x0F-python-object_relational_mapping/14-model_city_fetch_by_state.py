@@ -15,8 +15,9 @@ def main(argv):
     Base.metadata.create_all(engine)
 
     session = Session(engine)
-    for state,city in session.query(State,City).where(State.id == City.state_id).order_by(asc(City.id)).all():
-        print("{}: ({}) {}".format(state.name,city.id, city.name))
+    for state, city in session.query(State, City)\
+            .where(State.id == City.state_id).order_by(asc(City.id)).all():
+        print("{}: ({}) {}".format(state.name, city.id, city.name))
     session.close()
 
 
