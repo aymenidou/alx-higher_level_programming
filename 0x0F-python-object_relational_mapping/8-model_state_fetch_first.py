@@ -18,7 +18,7 @@ def main(argv):
     if (state is not None):
         print("{}: {}".format(state.id, state.name))
     else:
-        print("None")
+        print("Nothing")
     session.close()
 
 
