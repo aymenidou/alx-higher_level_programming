@@ -15,7 +15,7 @@ def main(argv):
 
     session = Session(engine)
     state = session.query(State).order_by(asc(State.id)).first()
-    if (state):
+    if (state is not None):
         print("{}: {}".format(state.id, state.name))
     session.close()
 
