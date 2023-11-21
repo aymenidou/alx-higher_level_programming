@@ -17,6 +17,8 @@ def main(argv):
     state = session.query(State).order_by(asc(State.id)).first()
     if (state is not None):
         print("{}: {}".format(state.id, state.name))
+    else:
+        print("None")
     session.close()
 
 
