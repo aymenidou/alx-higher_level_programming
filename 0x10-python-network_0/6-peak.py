@@ -1,4 +1,6 @@
 #!/usr/bin/python3
+"""this module contain find_peak function"""
+
 
 def find_peak(list_of_integers):
     """find the peak in a list of integers"""
