@@ -1,5 +1,5 @@
 
-const URL = 'https://www.fourtonfish.com/hellosalut/hello/';
+const URL = 'https://hellosalut.stefanbohacek.dev/';
 
 function SayHello (lang) {
   $.get(`${URL}?lang=${lang}`, (data, status) => {
