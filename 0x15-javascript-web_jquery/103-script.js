@@ -14,4 +14,11 @@ $(document).ready(function () {
     const lang = $('#language_code').val();
     SayHello(lang);
   });
+  $('#language_code').keypress(function (event) {
+    const keycode = (event.keyCode ? event.keyCode : event.which);
+    if (keycode === 13) {
+      const lang = $('#language_code').val();
+      SayHello(lang);
+    }
+  });
 });
