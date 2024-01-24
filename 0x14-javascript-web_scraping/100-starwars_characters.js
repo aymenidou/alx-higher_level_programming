@@ -7,10 +7,10 @@ request(urlFilm, function (err, res, body) {
   if (err) {
     console.log(err);
   } else {
-    const characters = JSON.parse(body).characters.sort();
-    console.log(characters);
+    const characters = JSON.parse(body).characters;
+    // console.log(characters);
     // const people = {}
-    for (let index = 1; index < characters.length; index++) {
+    for (let index = 0; index < characters.length; index++) {
       const element = characters[index];
       request(element, function (err, res, body) {
         if (err) {
